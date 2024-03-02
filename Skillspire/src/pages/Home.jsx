@@ -5,6 +5,8 @@ import { Link } from "react-router-dom"
 // Image and Video Import
 import Banner from "../assets/Images/banner.mp4"
 // Component Imports
+import Footer from "../components/Common/Footer"
+import ReviewSlider from "../components/Common/ReviewSlider"
 import CTAButton from "../components/core/HomePage/Button"
 import CodeBlocks from "../components/core/HomePage/CodeBlocks"
 import ExploreMore from "../components/core/HomePage/ExploreMore"
@@ -17,7 +19,7 @@ function Home() {
   return (
     <div>
       {/* Section 1 */}
-      <div className="relative mx-auto flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 text-white bg">
+      <div className="relative mx-auto flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 text-white">
         {/* Become a Instructor Button */}
         <Link to={"/signup"}>
           <div className="group mx-auto mt-16 w-fit rounded-full bg-richblack-800 p-1 font-bold text-richblack-200 drop-shadow-[0_1.5px_rgba(255,255,255,0.25)] transition-all duration-200 hover:scale-95 hover:drop-shadow-none">
@@ -182,10 +184,12 @@ function Home() {
         {/* Reviws from Other Learner */}
         <h1 className="text-center text-4xl font-semibold mt-8">
           Reviews from other learners
-        </h1>    
+        </h1>
+        <ReviewSlider />
       </div>
 
-      {/* Footer */}      
+      {/* Footer */}
+      <Footer />
     </div>
   )
 }
